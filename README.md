@@ -12,3 +12,17 @@
   * 0.3 a 0.5 positivo ou negativo indica uma correlação fraca;
   * 0 a 0.3 positivo ou negativo indica uma correlação desprezível;
   * 0 significa que a dependência linear entre as variáveis não existe.
+  
+---
+
+O Coeficiente de Relação de Pearson é dado por uma fórmula, que, no site [coeficientedepearson.online](coeficientedepearson.online), é aplicada de forma automática, e explicando cada resultado. Segue a fórmula:
+
+![Alt ou título da imagem](https://wikimedia.org/api/rest_v1/media/math/render/svg/602e9087d7a3c4de443b86c734d7434ae12890bc)  
+
+Facilite sua vida, torne os cálculos automáticos. 
+
+--- 
+--- 
+--- 
+
+##### Feito com 🧡 por Igor Lourenço
