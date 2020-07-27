@@ -21,8 +21,10 @@ O Coeficiente de Relação de Pearson é dado por uma fórmula, que, no site [co
 
 Facilite sua vida, torne os cálculos automáticos. 
 
---- 
---- 
---- 
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
 
 ##### Feito com 🧡 por Igor Lourenço
