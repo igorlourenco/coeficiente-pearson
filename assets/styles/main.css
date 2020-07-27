@@ -1,12 +1,42 @@
+body{
+    background-color: #eee;
+    color: black;
+    font-weight: bold;
+}
+
 .footer {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #DDD;
+    background-color: white;
     font-size: 12px;
-    color: #000;
+    color: black;
     text-align: center;
     padding-bottom: 5px;
     padding-top: 5px;
+    border-color: black;
+}
+
+.btn-orange {
+    background-color: orangered;
+    color: white;
+}
+
+.form-control {
+    border-color: orangered;
+    width: 80%;
+}
+
+#string-warn{
+    color: darkred;
+}
+
+#warning{
+    margin-left: 10%;
+    width: 80%;
+}
+
+#answers-area{
+    margin-left: 5%;
 }

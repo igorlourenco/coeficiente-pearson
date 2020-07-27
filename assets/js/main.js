@@ -1,4 +1,4 @@
-function splitInputsToArray(){
+function calculate(){
     var stringX = document.getElementById('string-x').value;
     var stringY = document.getElementById('string-y').value;
 
@@ -17,10 +17,10 @@ function getPearsonCorrelation(x, y) {
         shortestArrayLength = x.length;
     } else if (x.length > y.length) {
         shortestArrayLength = y.length;
-        document.getElementById('string-x-help').innerHTML = "o vetor X tem mais elementos do que deveria. Descartaremos " + (x.length - shortestArrayLength) + " elemento(s)";
+        document.getElementById('string-warn').innerHTML = "O vetor X tem mais elementos do que deveria. Descartaremos " + (x.length - shortestArrayLength) + " elemento(s)";
     } else {
         shortestArrayLength = x.length;
-        document.getElementById('string-y-help').innerHTML = "o vetor X tem mais elementos do que deveria. Descartaremos " + (y.length - shortestArrayLength) + " elemento(s)";
+        document.getElementById('string-warn').innerHTML = "O vetor X tem mais elementos do que deveria. Descartaremos " + (y.length - shortestArrayLength) + " elemento(s)";
     }
 
     var xy = [];
@@ -54,11 +54,27 @@ function getPearsonCorrelation(x, y) {
     var step4 = Math.sqrt( step2 * step3 );
     var answer = step1 / step4;
 
-    console.log(answer);
+    printResult(answer, sum_x, sum_y);
+}
 
-    var divNova = document.createElement("label");
-    var conteudoNovo = document.createTextNode("Coeficiente: " + answer);
-    divNova.appendChild(conteudoNovo);
-    document.getElementById('answers').appendChild(divNova);
+function printResult(answer, sum_x, sum_y){
+    document.getElementById('coefficient').innerHTML = '';
+    document.getElementById('sum-x').innerHTML = '';
+    document.getElementById('sum-y').innerHTML = '';
 
+    var resultCoefficientLabel = document.createElement("label");
+    var resultCoefficientText = document.createTextNode("Coeficiente: " + answer);
+    resultCoefficientLabel.appendChild(resultCoefficientText);
+
+    var resultSumXLabel = document.createElement("label");
+    var resultSumXText = document.createTextNode("Soma do vetor X: " + sum_x);
+    resultSumXLabel.appendChild(resultSumXText);
+
+    var resultSumYLabel = document.createElement("label");
+    var resultSumYText = document.createTextNode("Soma do vetor Y: " + sum_y);
+    resultSumYLabel.appendChild(resultSumYText);
+
+    document.getElementById('coefficient').appendChild(resultCoefficientLabel);
+    document.getElementById('sum-x').appendChild(resultSumXLabel);
+    document.getElementById('sum-y').appendChild(resultSumYLabel);
 }
