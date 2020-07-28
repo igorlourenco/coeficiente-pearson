@@ -1,17 +1,17 @@
 <!doctype html>
 <html lang="pt-br">
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
           integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
+    <link href="https://fonts.googleapis.com/css2?family=Mukta&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./assets/styles/main.css">
 
-    <title>Coeficiente de Pearson</title>
+    <title>Coeficiente de Pearson Online</title>
 </head>
 <body>
 
@@ -27,6 +27,7 @@
                         <label for="string-x">Entre com os valores "x"</label>
                         <input type="text" class="form-control" id="string-x" placeholder="11, 24, 23, 31, 1">
                     </div>
+                    <br>
                     <div class="form-group">
                         <label for="string-y">Agora, informe com os valores "y"</label>
                         <input type="text" class="form-control" id="string-y" placeholder="0, 12, 27, 19, 13">
@@ -36,6 +37,7 @@
                 </center>
 
                 <div id="warning">
+                    <br>
                     <small id="string-help" class="form-text text-muted">
                         Separe os valores de entrada por vírgula (,)
                     </small>
@@ -59,6 +61,130 @@
 
                 </div>
             </div>
+
+
+            <div class="row" id="other-actions">
+
+                <div class="col-12 col-md-6" id="additional-buttons">
+
+                </div>
+
+                <div class="col-12 col-md-6" id="all-data">
+
+                </div>
+            </div>
+
+
+            <div class="modal fade" id="showStepsModal" tabindex="-1" role="dialog"
+                 aria-labelledby="showStepsModalTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="showStepsModalTitle">Etapas do cálculo</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            ...
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-orange" data-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="showAllDataModal" tabindex="-1" role="dialog"
+                 aria-labelledby="showAllDataModalTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="showAllDataModalTitle">Dados obtidos no cálculo</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+
+                            <table class="table">
+                                <tr>
+                                    <th>
+                                        (Vetor X) × (Vetor Y)
+                                    </th>
+                                    <td>
+                                         <p id="xy"></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        (Vetor X)²
+                                    </th>
+                                    <td>
+                                        <p id="x2"></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        (Vetor Y)²
+                                    </th>
+                                    <td>
+                                        <p id="y2"></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Soma do vetor X
+                                    </th>
+                                    <td>
+                                        <p id="sum-x-data"></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Soma do vetor Y
+                                    </th>
+                                    <td>
+                                        <p id="sum-y-data"></p>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th>
+                                        Soma de (Vetor X) × (Vetor Y)
+                                    </th>
+                                    <td>
+                                        <p id="sum-xy"></p>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th>
+                                        Soma de (vetor X)²
+                                    </th>
+                                    <td>
+                                        <p id="sum-x2-data"></p>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th>
+                                        Soma do (vetor Y)²
+                                    </th>
+                                    <td>
+                                        <p id="sum-y2-data"></p>
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-orange" data-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
         <div class="col-2" id="banner-2">
             <!-- aqui vem outro anuncio -->

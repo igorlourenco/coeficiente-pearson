@@ -2,6 +2,7 @@ body{
     background-color: #eee;
     color: black;
     font-weight: bold;
+    font-family: 'Mukta', sans-serif;
 }
 
 .footer {
@@ -21,6 +22,12 @@ body{
 .btn-orange {
     background-color: orangered;
     color: white;
+}
+
+.btn-white {
+    background-color: white;
+    color: orangered;
+    border-color: orangered;
 }
 
 .form-control {
