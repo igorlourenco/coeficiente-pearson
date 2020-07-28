@@ -131,5 +131,5 @@ function modalShowAllData(xy, x2, y2, sum_x, sum_y, sum_xy, sum_x2, sum_y2) {
     document.getElementById( 'sum-y-data' ).appendChild( document.createTextNode( sum_y ) );
     document.getElementById( 'sum-xy' ).appendChild( document.createTextNode( sum_xy ) );
     document.getElementById( 'sum-x2-data' ).appendChild( document.createTextNode( sum_x2 ) );
-    document.getElementById( 'sum-y2-data' ).appendChild( document.createTextNode( sum_y ) );
+    document.getElementById( 'sum-y2-data' ).appendChild( document.createTextNode( sum_y2 ) );
 }
