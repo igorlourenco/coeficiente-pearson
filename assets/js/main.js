@@ -58,6 +58,7 @@ function getPearsonCorrelation(x, y) {
     printButtonShowSteps();
     printButtonShowAllData();
     modalShowAllData( xy, x2, y2, sum_x, sum_y, sum_xy, sum_x2, sum_y2 );
+    modalShowExplanationData(answer);
 }
 
 function printResult(answer, sum_x, sum_y) {
@@ -85,19 +86,19 @@ function printResult(answer, sum_x, sum_y) {
 function printButtonShowSteps() {
     document.getElementById( 'additional-buttons' ).innerHTML = '';
 
-    var showStepsButton = document.createElement( "button" );
-    showStepsButton.setAttribute( "type", "button" );
-    showStepsButton.setAttribute( "class", "btn btn-white" );
-    showStepsButton.setAttribute( "data-toggle", "modal" );
-    showStepsButton.setAttribute( "data-target", "#showStepsModal" );
+    var showExplanationButton = document.createElement( "button" );
+    showExplanationButton.setAttribute( "type", "button" );
+    showExplanationButton.setAttribute( "class", "btn btn-white" );
+    showExplanationButton.setAttribute( "data-toggle", "modal" );
+    showExplanationButton.setAttribute( "data-target", "#showExplanationModal" );
 
-    var showStepsButtonText = document.createTextNode( "Ver detalhes do cálculo" );
+    var showExplanationButtonText = document.createTextNode( "Ver detalhes do resultado" );
 
-    showStepsButton.appendChild( showStepsButtonText );
+    showExplanationButton.appendChild( showExplanationButtonText );
 
     var center = document.createElement( "center" );
 
-    center.appendChild( showStepsButton );
+    center.appendChild( showExplanationButton );
 
     document.getElementById( 'additional-buttons' ).appendChild( center );
 }
@@ -132,4 +133,45 @@ function modalShowAllData(xy, x2, y2, sum_x, sum_y, sum_xy, sum_x2, sum_y2) {
     document.getElementById( 'sum-xy' ).appendChild( document.createTextNode( sum_xy ) );
     document.getElementById( 'sum-x2-data' ).appendChild( document.createTextNode( sum_x2 ) );
     document.getElementById( 'sum-y2-data' ).appendChild( document.createTextNode( sum_y2 ) );
+}
+
+function modalShowExplanationData(answer){
+    var showExplanationCoefficient = document.createTextNode( answer);
+    var showExplanationText;
+
+
+    document.getElementById( 'coefficient-detail' ).appendChild( showExplanationCoefficient );
+
+    if(answer >= 1){
+        showExplanationText = document.createTextNode("a relação entre X e Y é perfeita.")
+    }
+
+    else if (answer < 1 && answer >= 0.9){
+        showExplanationText = document.createTextNode("a relação entre X e Y é muito forte.")
+    }
+
+    else if ((answer < 0.9 && answer >= 0.7) || (answer > -0.9 && answer <= 0.7)){
+        showExplanationText = document.createTextNode("a relação entre X e Y é forte.")
+    }
+    else if ((answer < 0.7 && answer >= 0.5) || (answer > -0.7 && answer <= 0.5)){
+        showExplanationText = document.createTextNode("a relação entre X e Y é moderada.")
+    }
+    else if ((answer < 0.5 && answer >= 0.3) || (answer > -0.5 && answer <= 0.3)){
+        showExplanationText = document.createTextNode("a relação entre X e Y é fraca.")
+    }
+    else if ((answer < 0.3 && answer >= 0) || (answer > -0.3 && answer <= 0)){
+        showExplanationText = document.createTextNode("a relação entre X e Y é desprezível.")
+    }
+
+    else if(answer <= -1){
+        showExplanationText = document.createTextNode("a relação entre X e Y é perfeita e negativa (quanto mais uma variável aumenta, mais a outra diminui.")
+    }
+
+    else if (answer === 0){
+        showExplanationText = document.createTextNode("a relação entre X e Y não existe.")
+    }
+
+    document.getElementById( 'coefficient-explanation-detail' ).appendChild( showExplanationText );
+
+
 }
