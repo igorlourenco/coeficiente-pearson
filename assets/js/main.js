@@ -150,13 +150,13 @@ function modalShowExplanationData(answer){
         showExplanationText = document.createTextNode("a relação entre X e Y é muito forte.")
     }
 
-    else if ((answer < 0.9 && answer >= 0.7) || (answer > -0.9 && answer <= 0.7)){
+    else if ((answer < 0.9 && answer >= 0.7) || (answer > -0.9 && answer <= -0.7)){
         showExplanationText = document.createTextNode("a relação entre X e Y é forte.")
     }
-    else if ((answer < 0.7 && answer >= 0.5) || (answer > -0.7 && answer <= 0.5)){
+    else if ((answer < 0.7 && answer >= 0.5) || (answer > -0.7 && answer <= -0.5)){
         showExplanationText = document.createTextNode("a relação entre X e Y é moderada.")
     }
-    else if ((answer < 0.5 && answer >= 0.3) || (answer > -0.5 && answer <= 0.3)){
+    else if ((answer < 0.5 && answer >= 0.3) || (answer > -0.5 && answer <= -0.3)){
         showExplanationText = document.createTextNode("a relação entre X e Y é fraca.")
     }
     else if ((answer < 0.3 && answer >= 0) || (answer > -0.3 && answer <= 0)){
