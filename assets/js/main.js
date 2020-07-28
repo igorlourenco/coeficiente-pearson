@@ -126,24 +126,15 @@ function printButtonShowAllData() {
 }
 
 function modalShowAllData(xy, x2, y2, sum_x, sum_y, sum_xy, sum_x2, sum_y2) {
-    
-    document.getElementById( 'xy' ).innerHTML = '';
-    document.getElementById( 'x2' ).innerHTML = '';
-    document.getElementById( 'y2' ).innerHTML = '';
-    document.getElementById( 'sum-x-data' ).innerHTML = '';
-    document.getElementById( 'sum-y-data' ).innerHTML = '';
-    document.getElementById( 'sum-xy' ).innerHTML = '';
-    document.getElementById( 'sum-x2-data' ).innerHTML = '';
-    document.getElementById( 'sum-y2-data' ).innerHTML = '';
-    
-    document.getElementById( 'xy' ).appendChild( document.createTextNode( xy ) );
-    document.getElementById( 'x2' ).appendChild( document.createTextNode( x2 ) );
-    document.getElementById( 'y2' ).appendChild( document.createTextNode( y2 ) );
-    document.getElementById( 'sum-x-data' ).appendChild( document.createTextNode( sum_x ) );
-    document.getElementById( 'sum-y-data' ).appendChild( document.createTextNode( sum_y ) );
-    document.getElementById( 'sum-xy' ).appendChild( document.createTextNode( sum_xy ) );
-    document.getElementById( 'sum-x2-data' ).appendChild( document.createTextNode( sum_x2 ) );
-    document.getElementById( 'sum-y2-data' ).appendChild( document.createTextNode( sum_y2 ) );
+ 
+    document.getElementById( 'xy' ).replaceChild( document.createTextNode( xy ) );
+    document.getElementById( 'x2' ).replaceChild( document.createTextNode( x2 ) );
+    document.getElementById( 'y2' ).replaceChild( document.createTextNode( y2 ) );
+    document.getElementById( 'sum-x-data' ).replaceChild( document.createTextNode( sum_x ) );
+    document.getElementById( 'sum-y-data' ).replaceChild( document.createTextNode( sum_y ) );
+    document.getElementById( 'sum-xy' ).replaceChild( document.createTextNode( sum_xy ) );
+    document.getElementById( 'sum-x2-data' ).replaceChild( document.createTextNode( sum_x2 ) );
+    document.getElementById( 'sum-y2-data' ).replaceChild( document.createTextNode( sum_y2 ) );
 }
 
 function modalShowExplanationData(answer){
@@ -151,7 +142,7 @@ function modalShowExplanationData(answer){
     var showExplanationText;
     showExplanationText.innerHTML = '';
 
-    document.getElementById( 'coefficient-detail' ).appendChild( showExplanationCoefficient );
+    document.getElementById( 'coefficient-detail' ).replaceChild( showExplanationCoefficient );
 
     if(answer >= 1){
         showExplanationText = document.createTextNode("a relação entre X e Y é perfeita.")
@@ -182,8 +173,7 @@ function modalShowExplanationData(answer){
         showExplanationText = document.createTextNode("a relação entre X e Y não existe.")
     }
 
-    document.getElementById( 'coefficient-explanation-detail' ).innerHTML = '';
-    document.getElementById( 'coefficient-explanation-detail' ).appendChild( showExplanationText );
+    document.getElementById( 'coefficient-explanation-detail' ).replaceChild( showExplanationText );
 
 
 }
