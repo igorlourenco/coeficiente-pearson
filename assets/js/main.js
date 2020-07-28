@@ -54,6 +54,8 @@ function getPearsonCorrelation(x, y) {
     var step4 = Math.sqrt( step2 * step3 );
     var answer = step1 / step4;
 
+    document.querySelector("b").innerHTML = '';
+    document.querySelector("td").innerHTML = '';
     printResult( answer, sum_x, sum_y );
     printButtonShowSteps();
     printButtonShowAllData();
