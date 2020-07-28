@@ -140,7 +140,6 @@ function modalShowAllData(xy, x2, y2, sum_x, sum_y, sum_xy, sum_x2, sum_y2) {
 function modalShowExplanationData(answer){
     var showExplanationCoefficient = document.createTextNode( answer);
     var showExplanationText;
-    showExplanationText.innerHTML = '';
 
 document.getElementById( 'coefficient-detail' ).appendChild( showExplanationCoefficient );
     
