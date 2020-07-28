@@ -54,8 +54,7 @@ function getPearsonCorrelation(x, y) {
     var step4 = Math.sqrt( step2 * step3 );
     var answer = step1 / step4;
 
-    document.querySelector("b").innerHTML = '';
-    document.querySelector("td").innerHTML = '';
+   
     printResult( answer, sum_x, sum_y );
     printButtonShowSteps();
     printButtonShowAllData();
@@ -127,6 +126,16 @@ function printButtonShowAllData() {
 }
 
 function modalShowAllData(xy, x2, y2, sum_x, sum_y, sum_xy, sum_x2, sum_y2) {
+    
+    document.getElementById( 'xy' ).innerHTML = '';
+    document.getElementById( 'x2' ).innerHTML = '';
+    document.getElementById( 'y2' ).innerHTML = '';
+    document.getElementById( 'sum-x-data' ).innerHTML = '';
+    document.getElementById( 'sum-y-data' ).innerHTML = '';
+    document.getElementById( 'sum-xy' ).innerHTML = '';
+    document.getElementById( 'sum-x2-data' ).innerHTML = '';
+    document.getElementById( 'sum-y2-data' ).innerHTML = '';
+    
     document.getElementById( 'xy' ).appendChild( document.createTextNode( xy ) );
     document.getElementById( 'x2' ).appendChild( document.createTextNode( x2 ) );
     document.getElementById( 'y2' ).appendChild( document.createTextNode( y2 ) );
@@ -140,7 +149,7 @@ function modalShowAllData(xy, x2, y2, sum_x, sum_y, sum_xy, sum_x2, sum_y2) {
 function modalShowExplanationData(answer){
     var showExplanationCoefficient = document.createTextNode( answer);
     var showExplanationText;
-
+    showExplanationText.innerHTML = '';
 
     document.getElementById( 'coefficient-detail' ).appendChild( showExplanationCoefficient );
 
@@ -173,6 +182,7 @@ function modalShowExplanationData(answer){
         showExplanationText = document.createTextNode("a relação entre X e Y não existe.")
     }
 
+    document.getElementById( 'coefficient-explanation-detail' ).innerHTML = '';
     document.getElementById( 'coefficient-explanation-detail' ).appendChild( showExplanationText );
 
 
