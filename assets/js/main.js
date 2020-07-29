@@ -165,7 +165,7 @@ document.getElementById( 'coefficient-detail' ).appendChild( showExplanationCoef
     }
 
     else if(answer <= -1){
-        showExplanationText = document.createTextNode("a relação entre X e Y é perfeita e negativa (quanto mais uma variável aumenta, mais a outra diminui.")
+        showExplanationText = document.createTextNode("a relação entre X e Y é perfeita e negativa (quanto mais uma variável aumenta, mais a outra diminui).")
     }
 
     else if (answer === 0){
