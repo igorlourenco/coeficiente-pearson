@@ -1,4 +1,4 @@
-# Coeficiente de Correlação de Pearson
+### ⚡ Coeficiente de Correlação de Pearson
 
 #### Disponível online em: [coeficientedepearson.online](http://coeficientedepearson.online)
 
@@ -23,4 +23,4 @@ Facilite sua vida, automatize os cálculos.
 
 ---
 
-Feito com 🧡 por Igor Lourenço
+Feito com ❤️ e HTML por Igor Lourenço
