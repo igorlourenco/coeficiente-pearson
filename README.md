@@ -2,6 +2,8 @@
 
 ###### 👾 Disponível em: [coeficientedepearson.online](http://coeficientedepearson.online)
 
+---
+
 * Os coeficientes de correlação são métodos usados para medir o grau de relações entre as variáveis.
 * Um desses coeficientes é o Coeficiente de Pearson, que mede a correlação entre dois grupos numéricos, retornando um valor entre -1 e 1, onde:
   * o valor 1 representa uma relação perfeita positiva entre as váriavéis. Se uma aumenta, a outra aumenta;
